@@ -1,7 +1,4 @@
 
-// ===================================
-// 1. PROFILE CARD FLIP
-// ===================================
 
 const card = document.querySelector(".profile-card");
 
@@ -16,10 +13,6 @@ backButton.onclick = function() {
     card.classList.remove("is-flipped");
 };
 
-
-// ===================================
-// 2. PROJECT CARDS
-// ===================================
 
 const projectCards = document.querySelectorAll(".project-card");
 
@@ -66,9 +59,7 @@ previousButton.onclick = function() {
 };
 
 
-// ===================================
-// 3. SCROLL TO TOP BUTTON
-// ===================================
+
 
 const topButton = document.querySelector("#topButton");
 
@@ -80,22 +71,17 @@ topButton.onclick = function() {
 };
 
 
-// ===================================
-// 4. LEARNING CARDS SHUFFLE
-// ===================================
 
 const learningCards = document.querySelector(".learning-cards");
 const shuffleButton = document.querySelector("#shuffleButton");
 
 function shuffleDeck() {
 
-    // Stack the cards if they are already spread
     if (learningCards.classList.contains("is-shuffling")) {
         learningCards.classList.remove("is-shuffling");
         return;
     }
 
-    // Mix cards randomly
     const cards = Array.from(learningCards.children);
 
     for (let i = cards.length - 1; i > 0; i--) {
@@ -105,37 +91,26 @@ function shuffleDeck() {
         [cards[randomIndex], cards[i]];
     }
 
-    // Put cards back in their new order
     cards.forEach(function(card) {
         learningCards.appendChild(card);
     });
 
-    // Spread the cards
     learningCards.classList.add("is-shuffling");
 }
 
-// Clicking the cards
 learningCards.addEventListener("click", shuffleDeck);
 
-// Clicking the shuffle button
 shuffleButton.addEventListener("click", shuffleDeck);
 
-
-// ===================================
-// 5. INTRO SCREEN ANIMATION
-// ===================================
 
 const introScreen = document.querySelector(".intro-screen");
 
 window.addEventListener("load", function() {
 
-    // Wait for the greeting to appear
     setTimeout(function() {
 
-        // Fade out the greeting
         introScreen.classList.add("text-fading");
 
-        // After fading, split the panels
         setTimeout(function() {
             introScreen.classList.add("opening");
         }, 500);

@@ -787,7 +787,6 @@ box-sizing: border-box;
     transition: transform 0.5s ease;
 }
 
-/* Bring the cards together */
 .learning-cards.is-shuffling .learning-card:nth-child(1) {
     transform: translateX(230px) rotate(15deg);
     z-index: 3;
@@ -833,8 +832,6 @@ box-sizing: border-box;
     transform: translateX(-50%) rotate(8deg);
     z-index: 3;
 }
-/* Smooth card spreading effect */
-
 .learning-card {
     transition: transform 0.9s cubic-bezier(0.2, 0.8, 0.2, 1),
                 box-shadow 0.5s ease;
@@ -859,7 +856,6 @@ box-sizing: border-box;
     filter: brightness(1.05);
     cursor: pointer;
 }
-/* Mobile layout for learning cards */
 @media (max-width: 600px) {
 
     .learning-cards {
@@ -1008,7 +1004,6 @@ box-sizing: border-box;
 #shuffleButton {
     margin-top: 0;
 }
-/* Opening intro screen */
 .intro-screen {
     position: fixed;
     inset: 0;
@@ -1037,7 +1032,6 @@ box-sizing: border-box;
     margin-top: 15px;
     letter-spacing: 4px;
 }
-/* Left and right intro panels */
 .intro-left,
 .intro-right {
     position: absolute;
@@ -1057,7 +1051,6 @@ box-sizing: border-box;
     right: 0;
     border-left: 2px solid rgba(212, 175, 55, 0.5);
 }
-/* Greeting entrance animation */
 .intro-screen h1 {
     animation: helloAppear 1.5s ease forwards;
 }
@@ -1073,7 +1066,6 @@ box-sizing: border-box;
         transform: scale(1);
     }
 }
-/* Split screen animation */
 .intro-screen.opening .intro-left {
     animation: slideLeft 1.2s ease forwards;
 }
@@ -1103,7 +1095,6 @@ box-sizing: border-box;
         visibility: hidden;
     }
 }
-/* Greeting fade-out */
 .intro-screen.opening h1 {
     animation: helloDisappear 0.5s ease forwards;
 }
@@ -1119,10 +1110,8 @@ box-sizing: border-box;
         transform: scale(0.9);
     }
 }
-/* Profile card entrance animation */
 
 
-/* Profile card entrance */
 .profile-card-entrance {
     opacity: 0;
     animation: profileAppear 1.5s ease 2.8s forwards;
@@ -1140,14 +1129,12 @@ box-sizing: border-box;
     }
 }
 
-/* Profile card floating */
 .profile-card {
     animation: floatCard 4s ease-in-out infinite;
 }
 html {
     scroll-behavior: smooth;
 }
-/* Custom scrollbar */
 ::-webkit-scrollbar {
     width: 10px;
 }
